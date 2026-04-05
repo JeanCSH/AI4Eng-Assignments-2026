@@ -1,0 +1,10 @@
+Pregunta 4: Reducción de Dimensionalidad en Señales EEG (Sklearn)
+Contexto: Las señales de electroencefalografía (EEG) suelen tener una alta dimensionalidad. Para facilitar su visualización y análisis, se aplican técnicas de descomposición para extraer los componentes que explican la mayor parte de la varianza.
+
+Misión: Crea una función llamada optimizar_pca_señales que reciba un arreglo de numpy X y un flotante varianza_objetivo (entre 0 y 1). La función debe:
+
+Instanciar y ajustar un modelo de PCA sobre X.
+
+Determinar el número mínimo de componentes necesarios para alcanzar o superar la varianza_objetivo acumulada.
+
+Devolver una tupla con: (número de componentes, arreglo de varianza explicada acumulada).

@@ -1,0 +1,10 @@
+Pregunta 1: Procesamiento de Expresión Génica (Pandas)
+Contexto: En bioinformática, es común trabajar con matrices de expresión donde las filas son genes y las columnas son muestras. A menudo, los datos crudos contienen ruido o genes con poca variabilidad que no aportan información relevante para modelos predictivos.
+
+Misión: Crea una función llamada filtrar_genes_criticos que reciba un DataFrame de pandas (donde cada columna es un gen), un umbral de varianza mínimo y un porcentaje máximo de valores nulos permitido. La función debe:
+
+Eliminar las columnas (genes) que superen el porcentaje de valores nulos especificado.
+
+Imputar los valores nulos restantes con la media de cada columna.
+
+Filtrar y devolver únicamente las columnas cuya varianza sea estrictamente superior al umbral dado.

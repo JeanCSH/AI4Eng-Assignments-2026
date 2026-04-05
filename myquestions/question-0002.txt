@@ -1,0 +1,10 @@
+Pregunta 2: Análisis de Estabilidad en Signos Vitales (Pandas)
+Contexto: En una unidad de cuidados intensivos, se monitorean señales fisiológicas continuamente. Es crucial identificar periodos de inestabilidad comparando las mediciones actuales con promedios móviles históricos.
+
+Misión: Crea una función llamada detectar_inestabilidad_fisiologica que reciba un DataFrame con una columna 'frecuencia_cardiaca' y un entero ventana. La función debe:
+
+Calcular la media móvil (rolling mean) de la frecuencia cardíaca usando el tamaño de ventana proporcionado.
+
+Crear una nueva columna llamada 'desviacion' que sea la diferencia absoluta entre el valor original y su media móvil.
+
+Devolver un nuevo DataFrame que contenga únicamente las filas donde la 'desviacion' sea mayor al 15% de la media móvil de esa fila (ignorar filas con valores NaN resultantes del cálculo de la ventana).

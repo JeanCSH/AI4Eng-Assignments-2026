@@ -1,1 +1,3 @@
-# AI4Eng-Assignments-2026
+Jean Carlos Suarez Hernandez
+jean.suarez@udea.edu.co
+

@@ -1,12 +1,17 @@
 import numpy as np
+from sklearn.decomposition import PCA
+
+def optimizar_pca_señales(X, varianza_objetivo):
+    pca = PCA().fit(X)
+    cum_var = np.cumsum(pca.explained_variance_ratio_)
+    n_comp = np.argmax(cum_var >= varianza_objetivo) + 1
+    return (int(n_comp), cum_var)
 
 def generar_caso_de_uso_optimizar_pca_señales():
-    n_canales = np.random.randint(20, 40)
-    n_tiempos = 500
-    # Generar datos con correlación estructural
-    base = np.random.randn(n_tiempos, 5)
-    X = np.dot(base, np.random.rand(5, n_canales)) + np.random.normal(0, 0.1, (n_tiempos, n_canales))
+    X = np.random.rand(100, 20)
+    v_obj = 0.90
     
-    varianza_objetivo = np.random.uniform(0.85, 0.95)
+    entrada = {"X": X, "varianza_objetivo": v_obj}
+    salida_esperada = optimizar_pca_señales(X, v_obj)
     
-    return {"X": X, "varianza_objetivo": varianza_objetivo}
+    return entrada, salida_esperada
